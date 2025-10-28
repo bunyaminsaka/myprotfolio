@@ -40,9 +40,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-[#FFED29]">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b-2 border-slate-800 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <motion.div
@@ -61,7 +61,7 @@ export default function Home() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-slate-600 hover:text-blue-600 transition-colors duration-200"
+                  className="text-slate-700 hover:text-slate-900 font-medium transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-slate-100"
                 >
                   {item}
                 </a>
@@ -83,28 +83,28 @@ export default function Home() {
             <motion.div variants={fadeInUp} className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">
-                  Hi, I'm <span className="text-blue-600">Bünyamin</span>
+                  Hi, I'm <span className="text-slate-900 bg-slate-100 px-3 py-1 rounded-lg">Bünyamin</span>
           </h1>
-                <p className="text-xl text-slate-600 leading-relaxed">
+                <p className="text-xl text-slate-700 leading-relaxed font-medium">
                   A Computer Science student and aspiring full-stack developer from Poznań, Poland.
                 </p>
-                <div className="flex items-center space-x-4 text-slate-600">
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5" />
-                    <span>Poznań, Poland</span>
+                <div className="flex flex-wrap items-center gap-4 text-slate-700">
+                  <div className="flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full">
+                    <MapPin className="w-5 h-5 text-slate-600" />
+                    <span className="font-medium">Poznań, Poland</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Briefcase className="w-5 h-5" />
-                    <span>Customer Representative at TP Poland</span>
+                  <div className="flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full">
+                    <Briefcase className="w-5 h-5 text-slate-600" />
+                    <span className="font-medium">Customer Representative at TP Poland</span>
                   </div>
                 </div>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 <motion.a
                   href="#contact"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                  className="bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-900 transition-colors duration-200 shadow-lg"
                 >
                   Get In Touch
                 </motion.a>
@@ -112,7 +112,7 @@ export default function Home() {
                   href="#projects"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors duration-200"
+                  className="bg-white/80 text-slate-800 px-8 py-4 rounded-xl font-semibold hover:bg-white transition-colors duration-200 shadow-lg border-2 border-slate-200"
                 >
                   View My Work
                 </motion.a>
@@ -120,16 +120,17 @@ export default function Home() {
             </motion.div>
             <motion.div variants={fadeInUp} className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-slate-200 rounded-2xl flex items-center justify-center">
+                <div className="w-80 h-80 bg-white/90 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl border-4 border-slate-200">
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-slate-800 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
                       <span className="text-white text-4xl font-bold">BS</span>
                     </div>
-                    <p className="text-slate-600">Professional Photo</p>
+                    <p className="text-slate-700 font-medium">Professional Photo</p>
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-400 rounded-full opacity-20"></div>
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-slate-300 rounded-full opacity-60 shadow-lg"></div>
+                <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-slate-400 rounded-full opacity-60 shadow-lg"></div>
+                <div className="absolute top-8 -left-8 w-12 h-12 bg-slate-200 rounded-full opacity-80"></div>
               </div>
             </motion.div>
           </motion.div>
@@ -137,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="education" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +158,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-xl border border-slate-200"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-600 p-3 rounded-lg">
@@ -181,7 +182,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-slate-50 p-8 rounded-xl border border-slate-200"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-green-600 p-3 rounded-lg">
@@ -204,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 px-4 sm:px-6 lg:px-8">
+      <section id="experience" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -224,7 +225,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-600 p-3 rounded-lg">
@@ -248,7 +249,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-green-600 p-3 rounded-lg">
@@ -273,7 +274,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-purple-600 p-3 rounded-lg">
@@ -298,7 +299,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -318,7 +319,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-orange-50 to-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow duration-300"
+              className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-orange-600 p-3 rounded-lg w-fit mb-4">
                 <Database className="w-6 h-6 text-white" />
@@ -342,7 +343,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow duration-300"
+              className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-blue-600 p-3 rounded-lg w-fit mb-4">
                 <Monitor className="w-6 h-6 text-white" />
@@ -365,7 +366,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-purple-50 to-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg transition-shadow duration-300"
+              className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-purple-600 p-3 rounded-lg w-fit mb-4">
                 <Zap className="w-6 h-6 text-white" />
@@ -388,7 +389,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -408,7 +409,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                 <Code className="w-6 h-6 mr-2 text-blue-600" />
@@ -452,7 +453,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl font-semibold text-slate-800 mb-6 flex items-center">
                 <Heart className="w-6 h-6 mr-2 text-red-600" />
@@ -496,7 +497,7 @@ export default function Home() {
       </section>
 
       {/* Languages Section */}
-      <section id="languages" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="languages" className="py-16 px-4 sm:px-6 lg:px-8 bg-white/70 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -516,7 +517,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center bg-gradient-to-br from-red-50 to-slate-50 p-8 rounded-xl border border-slate-200"
+              className="text-center bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-red-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Globe className="w-8 h-8 text-white" />
@@ -529,7 +530,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-xl border border-slate-200"
+              className="text-center bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-blue-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Globe className="w-8 h-8 text-white" />
@@ -542,7 +543,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center bg-gradient-to-br from-green-50 to-slate-50 p-8 rounded-xl border border-slate-200"
+              className="text-center bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <div className="bg-green-600 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Globe className="w-8 h-8 text-white" />
@@ -555,7 +556,7 @@ export default function Home() {
       </section>
 
       {/* Interests & Contact Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -615,7 +616,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-slate-200"
+              className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl border-2 border-slate-300 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-2xl font-semibold text-slate-800 mb-6">Get In Touch</h3>
               <div className="space-y-4">
@@ -659,9 +660,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-slate-800 text-white py-8 px-4 sm:px-6 lg:px-8 border-t-4 border-slate-600">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-300">
+          <p className="text-slate-300 font-medium">
             © 2024 Bünyamin Saka. All rights reserved.
           </p>
         </div>
